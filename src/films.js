@@ -27,6 +27,8 @@ function orderAlphabetically(array) {
 
 // Exercise 5: Order by year, ascending
 function orderByYear() {
+  // let result = array.map(movie => movie.year).sort((a, b) => a - b)
+  return result;
 
 }
 
