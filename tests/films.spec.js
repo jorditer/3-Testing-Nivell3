@@ -319,7 +319,40 @@ describe('Function "moviesAverageByCategory"', () => {
     ];
     expect(typeof moviesAverageByCategory(testArr, 'Drama')).toBe('number');
   });
-  it('should return the correct average')
+  it('should return the correct average', () => {
+        const testArr = [
+      {
+        genre: ['Drama', 'War'],
+        score: 8
+      },
+      {
+        genre: ['Drama', 'Western'],
+        score: 7
+      },
+      {
+        genre: ['Crime', 'Drama'],
+        score: 9
+      }
+    ];
+    expect(moviesAverageByCategory(testArr, 'Drama')).toBe(8);
+  })
+  it('should return the correct average', () => {
+        const testArr = [
+      {
+        genre: ['War'],
+        score: 8
+      },
+      {
+        genre: ['Western'],
+        score: 7
+      },
+      {
+        genre: ['Crime'],
+        score: 9
+      }
+    ];
+    expect(moviesAverageByCategory(testArr, 'Drama')).toBe(0);
+  })
 });
 
 // Exercise 7
