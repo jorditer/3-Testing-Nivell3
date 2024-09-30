@@ -293,9 +293,33 @@ describe('Function "orderByYear"', () => {
 // Exercise 6
 // YOUR CODE HERE. Test moviesAverageByCategory()
 describe('Function "moviesAverageByCategory"', () => {
-  it('ADD YOUR CODE IN films.spec.js file', () => {
-    expect(typeof hoursToMinutes).toBe('coffee');
+  it('should be declared', () => {
+    expect(typeof moviesAverageByCategory).toBe('function');
   });
+  it('should return a number', () => {
+    const testArr = [
+      {
+        title: 'Paths of Glory',
+        year: 1957,
+        genre: ['Drama', 'War'],
+        score: 8.4
+      },
+      {
+        title: 'Django Unchained',
+        year: 2012,
+        genre: ['Drama', 'Western'],
+        score: 8.4
+      },
+      {
+        title: 'Pulp Fiction',
+        year: 1994,
+        genre: ['Crime', 'Drama'],
+        score: 8.9
+      }
+    ];
+    expect(typeof moviesAverageByCategory(testArr, 'Drama')).toBe('number');
+  });
+  it('should return the correct average')
 });
 
 // Exercise 7
